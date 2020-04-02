@@ -40,6 +40,7 @@ void main()
                 break;
             case 's':
                 set_square_mode(true);
+                break;
             case 'y':
                 set_cell_color(YELLOW);
                 set_glyph_color(BLUE);

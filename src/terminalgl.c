@@ -31,9 +31,7 @@ void draw()
 {
     if (square_mode)
     {
-        printf(" ");
-        printf(" ");
-        moveleft(1);
+        printf("  ");
     }
     else
     {
@@ -67,6 +65,7 @@ void movedown(int n)
 
 void moveright(int n)
 {
+    n = square_mode ? 2 * n : n;
     while(n > 0)
     {
         printf("%sC", CSI);
@@ -76,6 +75,7 @@ void moveright(int n)
 
 void moveleft(int n)
 {
+    n = square_mode ? 2 * n : n;
     while(n > 0)
     {
         printf("%sD", CSI);
